@@ -1,3 +1,4 @@
+import { Facebook, GitHub, Google, Instagram, LinkedIn, Twitter } from '@mui/icons-material'
 import React from 'react'
 
 const Footer = () => {
@@ -15,24 +16,31 @@ const Footer = () => {
         {/* <!-- Left --> */}
     
         {/* <!-- Right --> */}
+        
         <div>
           <a href="" className="me-4 link-secondary">
-            <i className="fab fa-facebook-f"></i>
+            {/* <i className="fab fa-facebook-f"></i> */}
+            <Facebook/>
           </a>
           <a href="" className="me-4 link-secondary">
-            <i className="fab fa-twitter"></i>
+            {/* <i className="fab fa-twitter"></i> */}
+            <Twitter/>
           </a>
           <a href="" className="me-4 link-secondary">
-            <i className="fab fa-google"></i>
+            {/* <i className="fab fa-google"></i> */}
+            <Google/>
           </a>
           <a href="" className="me-4 link-secondary">
-            <i className="fab fa-instagram"></i>
+            {/* <i className="fab fa-instagram"></i> */}
+            <Instagram/>
           </a>
           <a href="" className="me-4 link-secondary">
-            <i className="fab fa-linkedin"></i>
+            {/* <i className="fab fa-linkedin"></i> */}
+            <LinkedIn/>
           </a>
           <a href="" className="me-4 link-secondary">
-            <i className="fab fa-github"></i>
+            {/* <i className="fab fa-github"></i> */}
+            <GitHub/>
           </a>
         </div>
         {/* <!-- Right --> */}
