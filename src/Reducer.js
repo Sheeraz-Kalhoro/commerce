@@ -1,8 +1,8 @@
-const initialState ={
-
+export const initialState ={
+totalPrice:0
 }
 
-function dispatcher(state, action){
+export function dispatcher(state, action){
     switch(action.type){
         
     }
