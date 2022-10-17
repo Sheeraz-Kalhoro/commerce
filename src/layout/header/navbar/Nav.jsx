@@ -1,7 +1,10 @@
+import { ShoppingBag } from "@mui/icons-material";
 import React from "react";
 import { Link } from "react-router-dom";
+import {useCart} from 'react-use-cart'
 
 const Nav = () => {
+  const {totalUniqueItems, totalItems} = useCart()
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="nav container px-3 py-1">
@@ -86,6 +89,10 @@ const Nav = () => {
           |
           <Link to="/register" className="text-decoration-none px-3">
             Sign up
+          </Link>
+          <Link to='/checkoutpage' className="cart">
+          <span className="text-decoration-none">{totalUniqueItems}</span>
+          <ShoppingBag/>
           </Link>
         </div>  
       </div>
