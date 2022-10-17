@@ -1,19 +1,19 @@
-import { ShoppingBag } from "@mui/icons-material";
+import { ShoppingBag, ShoppingBagOutlined } from "@mui/icons-material";
 import React from "react";
 import { Link } from "react-router-dom";
-import {useCart} from 'react-use-cart'
+import { useCart } from "react-use-cart";
 
 const Nav = () => {
-  const {totalUniqueItems, totalItems} = useCart()
+  const { totalUniqueItems, totalItems } = useCart();
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="nav container px-3 py-1">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="navbar navbar-brand text-decoration-none text-dark"
         >
-          Logo
-        </a>
+          Brand
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,7 +28,12 @@ const Nav = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to='/' className="nav-link active" aria-current="page" href="#">
+              <Link
+                to="/"
+                className="nav-link active"
+                aria-current="page"
+                href="#"
+              >
                 Home
               </Link>
             </li>
@@ -68,9 +73,6 @@ const Nav = () => {
                 </li>
               </ul>
             </li>
-            {/* <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
-        </li> */}
           </ul>
           <form className="d-flex" role="search">
             <input
@@ -83,6 +85,16 @@ const Nav = () => {
               Search
             </button>
           </form>
+          <Link
+            to="/checkoutpage"
+            className="text-decoration-none text-black px-2"
+          >
+            {/* <ShoppingBag />  */}
+            <ShoppingBagOutlined className="text-success"/>
+            <span >
+              <sup className="bg-primary text-white px-1 rounded-circle">{totalUniqueItems}</sup>
+            </span>
+          </Link>
           <Link to="/login" className="text-decoration-none px-3">
             Sign in
           </Link>
@@ -90,11 +102,7 @@ const Nav = () => {
           <Link to="/register" className="text-decoration-none px-3">
             Sign up
           </Link>
-          <Link to='/checkoutpage' className="cart">
-          <span className="text-decoration-none">{totalUniqueItems}</span>
-          <ShoppingBag/>
-          </Link>
-        </div>  
+        </div>
       </div>
     </nav>
   );

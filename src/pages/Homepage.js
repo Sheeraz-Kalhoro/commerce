@@ -24,21 +24,21 @@ const products = [
     id: 1,
     name: "Malm",
     image:blueshirt,
-    price: 9900,
+    price: 990.90,
     quantity: 1
   },
   {
     id: 2,
     name: "Nordli",
     image:blackshirts,
-    price: 16500,
+    price: 1650.09,
     quantity: 5
   },
   {
     id: 3,
     name: "Kullen",
     image:blackshirt,
-    price: 4500,
+    price: 4500.05,
     quantity: 1
   },
   {
@@ -52,13 +52,13 @@ const products = [
     id: 5,
     name: "Malm s",
     image:redshirt,
-    price: 9900,
+    price: 920.30,
     quantity: 4
   },
 ];
 
 return (
-  <div className='d-flex'>
+  <div className='d-flex  '>
     {/* {products.map((p) => (
       <div key={p.id}>
         <button onClick={() => addItem(p)}>Add to cart</button>

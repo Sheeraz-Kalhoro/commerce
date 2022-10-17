@@ -8,6 +8,8 @@ const Checkoutpage = () => {
         items,
         updateItemQuantity,
         removeItem,
+        cartTotal, 
+        totalItems
       } = useCart();
     
       if (isEmpty) return <p>Your cart is empty</p>;
@@ -21,17 +23,19 @@ const Checkoutpage = () => {
      
       return (
         <>
-          <h1>Cart ({totalUniqueItems})</h1>
+          <h1>Cart (totalUniqueItems {totalUniqueItems})</h1>
+          <h3>Cart (totalItems {totalItems})</h3>
     
           <ul className='d-flex flex-column ' >
             {items.map((item) => (
-              <li key={item.id} className='d-flex justify-content-between'>
-                {item.quantity} x {item.name} &mdash;
-                <button className='btn btn-danger'
+              <li key={item.id}   >
+                {item.quantity} x {item.name} {`Price:$ ${item.price * item.quantity}`}&mdash;
+                <button className='btn btn-danger '
                   onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
                 >
                   -
                 </button>
+                <img src={item.image} alt="productImage" width='100px'/>
                 <button className='btn btn-primary'
                   onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
                 >
